@@ -4,7 +4,7 @@
       <div class="avatar-container">
         <avatar
           :username="username"
-          :src="`http://localhost:3001/uploads/${profilePicture}`"
+          :src="`https://workout-tracker-server-4tiok.ondigitalocean.app/uploads/${profilePicture}`"
           :size="200"
           class="mt-2"
         ></avatar>

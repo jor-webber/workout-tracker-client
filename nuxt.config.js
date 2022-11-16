@@ -50,7 +50,7 @@ export default {
     sockets: [
       {
         name: 'home',
-        url: 'http://localhost:3001',
+        url: 'https://workout-tracker-server-4tiok.ondigitalocean.app/',
         default: true,
       }
     ]
@@ -59,7 +59,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'http://localhost:3001',
+    baseURL: 'https://workout-tracker-server-4tiok.ondigitalocean.app/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -69,6 +69,6 @@ export default {
     middleware: ['auth-user']
   },
   env: {
-    serverUrl: 'http://localhost:3001'
+    serverUrl: 'https://workout-tracker-server-4tiok.ondigitalocean.app/'
   }
 }

@@ -4,7 +4,7 @@
       <div class="column is-one-fifth avatar-container">
         <Avatar
             :username="username"
-            :src="`http://localhost:3001/uploads/${profilePicture}`"
+            :src="`https://workout-tracker-server-4tiok.ondigitalocean.app/uploads/${profilePicture}`"
             :size="100"
           />
       </div>

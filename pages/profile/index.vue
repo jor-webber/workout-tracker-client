@@ -113,7 +113,7 @@ export default {
   },
   async mounted() {
     const userId = this.$store.state.user.id
-    this.imageUrl = `http://localhost:3001/uploads/${this.$store.state.user.profilePicture}`
+    this.imageUrl = `https://workout-tracker-server-4tiok.ondigitalocean.app/uploads/${this.$store.state.user.profilePicture}`
 
     try {
       const result = await this.$axios.get(`/statistics/${userId}`, {
