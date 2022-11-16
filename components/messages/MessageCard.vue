@@ -6,7 +6,7 @@
           <div class="avatar-container column has-text-centered is-one-fifth">
             <avatar
               :username="username"
-              :src="`https://workout-tracker-server-4tiok.ondigitalocean.app/uploads/${profilePicture}`"
+              :src="`https://workout-tracker-mohawk2.herokuapp.com/uploads/${profilePicture}`"
               :size="120"
             ></avatar>
           </div>

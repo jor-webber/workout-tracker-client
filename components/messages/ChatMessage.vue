@@ -3,7 +3,7 @@
     <div class="container" v-if="isOwner">
       <div class="columns is-vcentered is-narrow">
         <div class="column is-one-fifth">
-          <Avatar :src="`https://workout-tracker-server-4tiok.ondigitalocean.app/uploads/${profilePicture}`" :username="username" :size="100" />
+          <Avatar :src="`https://workout-tracker-mohawk2.herokuapp.com/uploads/${profilePicture}`" :username="username" :size="100" />
           <p class="ml-5"><strong>{{username}}</strong></p>
         </div>
         <div class="column has-text-left">
@@ -20,7 +20,7 @@
         </div>
         <div class="column is-one-fifth right-align is-align-content-end is-flex">
           <div>
-            <Avatar :src="`https://workout-tracker-server-4tiok.ondigitalocean.app/uploads/${profilePicture}`" :username="username" :size="100" />
+            <Avatar :src="`https://workout-tracker-mohawk2.herokuapp.com/uploads/${profilePicture}`" :username="username" :size="100" />
             <p class="mr-4"><strong>{{username}}</strong></p>
           </div>       
         </div>

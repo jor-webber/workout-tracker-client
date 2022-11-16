@@ -6,7 +6,7 @@
         <div class="avatar-container">
           <Avatar
             :username="$store.state.user.username"
-            :src="imageUrl"
+            :src="`https://workout-tracker-mohawk2.herokuapp.com/uploads/${imageUrl}`"
             :size="100"
             class="mt-2"
           />

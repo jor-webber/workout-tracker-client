@@ -4,7 +4,7 @@
       <div class="avatar-container">
         <avatar
           :username="username"
-          :src="`https://workout-tracker-server-4tiok.ondigitalocean.app/uploads/${profilePicture}`"
+          :src="`https://workout-tracker-mohawk2.herokuapp.com/uploads/${profilePicture}`"
           :size="200"
           class="mt-2"
         ></avatar>
