@@ -18,9 +18,6 @@
               password-reveal
             ></b-input>
           </b-field>
-          <b-message v-if="errorActive" type="is-danger" class="error-message">
-            {{ errorMessage }}
-          </b-message>
           <div class="has-text-centered mt-3">
             <b-button type="is-primary mb-5 mr-5" @click="submitNewPassword"
               >Submit</b-button

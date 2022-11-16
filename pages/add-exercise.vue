@@ -1,6 +1,6 @@
 <template>
   <div class="container pt-5">
-    <add-exercise-card @exerciseAdded="updateExerciseTable"></add-exercise-card>
+    <add-exercise-card @exercise-added="updateExerciseTable"></add-exercise-card>
     <div class="columns">
       <div class="column">
         <h3 class="title is-3 has-text-centered mt-5">
@@ -16,7 +16,7 @@
           >
             {{ props.row.id }}
           </b-table-column>
-          <b-table-column field="name" label="Exercise" centered v-slot="props">
+          <b-table-column field="name" label="Exercise" centered sortable v-slot="props">
             {{ props.row.name }}
           </b-table-column>
           <b-table-column
@@ -129,7 +129,7 @@ export default {
     async deleteExercise(id) {
       try {
         await this.$axios.delete(`/exercises/${id}`)
-        this.updateExerciseTable();
+        await this.updateExerciseTable()
       } catch {
         this.$buefy.snackbar.open({
           message: 'Unable to delete exercise',

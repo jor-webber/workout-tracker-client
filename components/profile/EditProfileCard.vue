@@ -119,6 +119,8 @@ export default {
         profileCaption: this.profileCaption,
       })
 
+      console.log(this.profileCaption)
+
       this.$store.dispatch('user/updateUser', {
         id: userId,
         username: this.username,

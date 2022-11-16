@@ -87,12 +87,16 @@ export default {
   methods: {
     async sendMessage() {
       const { id: recievingId } = this.$route.params
+      if(!this.messageText) {
+        return;
+      }
       try {
         this.socket.emit('sendMessage', {
           message: this.messageText,
           recievingId,
           senderId: this.$store.state.user.id,
         })
+        this.messageText = ''
       } catch {
         this.$buefy.snackbar.open({
           message: 'unable to send message',
@@ -117,8 +121,8 @@ export default {
 .main-div {
   text-align: center;
   position: fixed;
-  bottom: 0px;
-  right: 30px;
-  left: 30px;
+  bottom: 20px;
+  right: 50px;
+  left: 50px;
 }
 </style>

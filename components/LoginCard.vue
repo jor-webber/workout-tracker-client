@@ -37,8 +37,8 @@
 export default {
   data() {
     return {
-      email: 'webber5@email.com',
-      password: 'password!!',
+      email: '',
+      password: '',
     }
   },
   methods: {

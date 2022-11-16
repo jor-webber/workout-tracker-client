@@ -29,12 +29,20 @@
               @click="deleteUser"
             ></b-button>
           </b-tooltip>
-          <b-tooltip label="Edit" type="is-dark">
+          <b-tooltip label="Edit" type="is-dark" class="mr-3">
             <b-button
               icon-left="pencil"
               size="is-large"
               type="is-warning"
               @click="$router.push('/edit-profile')"
+            ></b-button>
+          </b-tooltip>
+          <b-tooltip label="Health Metrics" type="is-dark">
+            <b-button
+              icon-left="heart-pulse"
+              size="is-large"
+              type="is-success"
+              @click="$router.push('/health-metrics')"
             ></b-button>
           </b-tooltip>
         </div>

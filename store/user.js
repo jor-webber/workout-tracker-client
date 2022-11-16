@@ -148,12 +148,63 @@ export const mutations = {
     state.profilePicture = null
   },
   updateUser(state, user) {
+    console.log('update user', user)
     state.firstName = user.firstName
     state.lastName = user.lastName
     state.username = user.username
     state.email = user.email
     state.profileCaption = user.profileCaption
-    state.profilePicture = user.profilePicture
+    const options = {
+      maxAge: 60 * 60
+    }
+    this.$cookies.removeAll();
+    this.$cookies.setAll([
+      {
+        name: 'id',
+        value: state.id,
+        opts: options
+      },
+      {
+        name: 'firstName',
+        value: state.firstName,
+        opts: options
+      },
+      {
+        name: 'lastName',
+        value: state.lastName,
+        opts: options
+      },
+      {
+        name: 'username',
+        value: state.username,
+        opts: options
+      },
+      {
+        name: 'email',
+        value: state.email,
+        opts: options
+      },
+      {
+        name: 'role',
+        value: state.role,
+        opts: options
+      },
+      {
+        name: 'token',
+        value: state.token,
+        opts: options
+      },
+      {
+        name: 'profileCaption',
+        value: state.profileCaption,
+        opts: options
+      },
+      {
+        name: 'profilePicture',
+        value: state.profilePicture,
+        opts: options
+      }
+    ])
   }
 }
 
@@ -189,6 +240,7 @@ export const actions = {
     commit('giveCookieValues', user);
   },
   updateUser({commit}, user) {
-    commit('updateUser', user);
+    console.log('update user action', user)
+    commit('updateUser', user)
   }
 }

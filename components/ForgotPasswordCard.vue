@@ -47,6 +47,14 @@ export default {
       this.$axios.$post('/auth/forgot-password', {
         email: this.email,
       })
+
+      this.$buefy.snackbar.open({
+        message: 'Please check your email for the new password link',
+        type: 'is-success',
+        position: 'is-bottom'
+      })
+
+      this.$router.push('/')
     },
   },
 }
